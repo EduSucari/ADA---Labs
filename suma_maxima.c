@@ -62,5 +62,50 @@ double medir_tiempo(int (*funcion)(int*, int), int* array, int n) {
 }
 
 int main() {
+    srand(time(NULL));
+
+    // Tamaños de prueba
+    int tamanos[] = {1000, 2000, 4000, 8000};
+    int cantidad_tamanos = 4;
+
+    printf("%-10s %-20s %-20s %-20s\n",
+           "N",
+           "CUBIC O(n^3)",
+           "CUADRATIC O(n^2)",
+           "LINEAL O(n)");
+
+    printf("---------------------------------------------------------------------\n");
+
+    for (int i = 0; i < cantidad_tamanos; i++) {
+        int n = tamanos[i];
+        int* arr = (int*)malloc(n * sizeof(int));
+
+        if (arr == NULL) {
+            printf("Error al reservar memoria.\n");
+            return 1;
+        }
+
+        // Array aleatorio
+        generar_array(arr, n);
+
+        // Mediciones
+        double tiempo_cubic =
+            medir_tiempo(suma_max_cubic, arr, n);
+
+        double tiempo_quadratic =
+            medir_tiempo(suma_max_quadratic, arr, n);
+
+        double tiempo_linear =
+            medir_tiempo(suma_max_linear, arr, n);
+
+        printf("%-10d %-20.6f %-20.6f %-20.6f\n",
+               n,
+               tiempo_cubic,
+               tiempo_quadratic,
+               tiempo_linear);
+
+        free(arr);
+    }
+
     return 0;
 }
