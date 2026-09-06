@@ -32,7 +32,9 @@ gcc main.c -o max_subarray
 ```
 Una vez compilado solo queda ejecutar con:
 
+```bash
 ./max_subarray
+```
 
 ## Conclusión
 
