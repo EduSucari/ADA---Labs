@@ -23,13 +23,6 @@ Los resultados de las mediciones y el análisis experimental se encuentran en la
 
 Dentro de esta carpeta se incluye un archivo Excel con los tiempos obtenidos, las razones de crecimiento y las predicciones correspondientes.
 
-## Estructura del proyecto
-
-├── main.c
-├── README.md
-└── resultados/
-    └── resultados.xlsx
-
 ## Compilación
 
 Para compilar el programa utilizando GCC:
