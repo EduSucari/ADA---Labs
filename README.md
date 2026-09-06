@@ -12,7 +12,7 @@ Los arreglos utilizados en las pruebas se generan aleatoriamente con valores ent
 
 - Generación automática de arreglos de diferentes tamaños.
 - Medición del tiempo de ejecución utilizando `time.h` y `clock()`.
-- Pruebas con tamaños `n = 1000, 2000, 4000 y 8000`.
+- Pruebas con tamaños `n = 1000, 2000, 4000 y 8000` y predicciones con `n = 16000, 32000`.
 - El experimento fue elaborado con los equipos de la escuela de Computer Science de la UNSA, por lo que no es posible acceder a las especificaciones del sistema por el momento.
 
 ## Resultados
